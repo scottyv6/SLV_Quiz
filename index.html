@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Quiz Challenge</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div id="container" class="h-100 d-inline-block" >
+      <p><span id="highscore" onclick="displayHS()">view Highscores</span><span id="timer"></span></p>
+      <div id="start">
+          <h2>Coding Quiz Challenge</h2>
+          <p>Try to answer the following code related questions within the
+              time limit. Keep in mind that incorrect answers will penalize 
+              your score by 10 seconds!
+          </p>
+          <button id='startBtn'>Start Quiz</button>
+      </div>
+
+      <div id="quiz" style="display: none;">
+          <p id="question"></p>
+          <ol>
+            <li class="choice" id="answer1" onclick="checkAnswer(1)"></li>
+            <li class="choice" id="answer2" onclick="checkAnswer(2)"></li>
+            <li class="choice" id="answer3" onclick="checkAnswer(3)"></li>
+            <li class="choice" id="answer4" onclick="checkAnswer(4)"></li>
+          </ol>
+          <p id="result"></p>
+      </div>
+    
+
+      <div id="HS" style="display: none;">
+        
+        <h2>Highscores</h2>
+        <ol id="hslist"></ol>
+        <button id="returnBtn">Return to Quiz</button>
+        <button id="clearHS">Clear Highscores</button>
+      </div>
+
+      <div id="end" style="display: none;">
+        <h2>All done!</h2>
+        <p id="displayScore"></p>
+        <form action="">
+          <label for="initials">Enter Initials: </label>
+          <input type="text" name="initials" id="initials">
+          <button id="submit">Submit</button>
+        </form>
+      </div>
+
+    </div> 
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
